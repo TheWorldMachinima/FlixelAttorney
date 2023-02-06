@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	<app title="FlixelAttorney" file="AceAttorney" packageName="com.sample.flixelattorney" package="com.sample.flixelattorney" version="0.0.1" company="TheWorldMachinima" main="Main"/>
+	
+	<assets path="assets" rename="assets"/>
+
+	<set name="SWF_VERSION" value="11.8"/>
+	<app preloader="flixel.system.FlxPreloader"/>
+
+	<haxelib name="lime"/>
+	<haxelib name="flixel"/>
+	<haxelib name="flixel-ui"/>
+	<haxelib name="flixel-addons"/>
+	
+	<window width="1280" height="720" fps="" background="#000000" hardware="true" vsync="false"/>
+	<window if="desktop" orientation="landscape" fullscreen="false" resizable="true" vsync="false"/>
+	
+	<set name="BUILD_DIR" value="export/debug" if="debug"/>
+	<set name="BUILD_DIR" value="export/release" unless="debug"/>
+	<set name="BUILD_DIR" value="export/32bit" if="32bit"/>
+
+	<classpath name="source"/>
+
+	<haxedef name="no-deprecation-warnings"/>
+</project>
